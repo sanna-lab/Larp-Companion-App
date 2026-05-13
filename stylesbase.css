@@ -38,3 +38,15 @@ hr {
 body {
 background-color: #403c3f;
 }
+
+@font-face {
+    font-family: "Eagle Lake";
+    src: url("fonts/EagleLake-Regular.ttf") format("truetype");
+    font-weight: regular;
+}
+
+@font-face {
+    font-family: "Simonetta";
+    src: url("fonts/Simonetta-Regular.ttf") format("truetype");
+    font-weight: regular;
+}
