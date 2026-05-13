@@ -1,7 +1,6 @@
 .loader {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 240px;
+  height: 240px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -20,4 +19,6 @@
   100% { transform: rotate(360deg); }
 }
 
+body {
 background-color: #595358;
+}
