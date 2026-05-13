@@ -19,6 +19,15 @@
   100% { transform: rotate(360deg); }
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #403c3f;
+  text-align: center;
+  padding: 10px;
+}
+
 body {
-background-color: #595358;
+background-color: #403c3f;
 }
