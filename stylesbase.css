@@ -29,6 +29,12 @@ footer {
   padding: 50px 0;
 }
 
+hr {
+  border: none;
+  border-top: 2px solid #cadf9e;
+  margin: 20px 0;
+}
+
 body {
 background-color: #403c3f;
 }
