@@ -97,6 +97,8 @@ a {
 p {
   color: #1c1b1c;
   margin: 10px 0;
+  font-family: 'Simonetta Regular';
+  font-size: 150%;
 }
 
 .button {
@@ -120,4 +122,14 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: contain;
+}
+
+@font-face {
+  font-family: Eagle Lake; 
+  src: url(risorse/base/fonts/EagleLake/EagleLake-Regular.ttf);
+}
+
+@font-face {
+  font-family: Simonetta Regular; 
+  src: url(risorse/base/fonts/Simonetta/Simonetta-Regular.ttf);
 }
