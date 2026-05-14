@@ -20,7 +20,7 @@
 }
 
 header {
-  background-color: #403c3f;
+  background-color: #282628;
   text-align: center;
   padding: 20px 0;
 }
@@ -28,7 +28,7 @@ header {
 .padded-boxes {
     display:flex;
     flex-wrap:wrap;
-    gap: 5px;
+    gap: 1px;
     margin: 0 auto;
     justify-content: center;
 }
@@ -42,7 +42,7 @@ header {
 
 .padded-boxes .heading {
     background:#a4ac96;
-    color:#403c3f;
+    color:#1c1b1c;
     text-align: center;
     margin:0;
     padding:1rem;
@@ -75,6 +75,11 @@ hr {
   border: none;
   border-top: 2px solid #a4ac96;
   margin: 20px 0;
+}
+
+h1 {
+  color: #a4ac96;
+  margin: 10px 0;
 }
 
 body {
