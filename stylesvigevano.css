@@ -1,3 +1,65 @@
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  background-color: #d44d5c;
+  padding: 10px;
+  color: #160029;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+header p {
+  margin: 0;
+  text-align: left;
+}
+
+
 body {
 background-color: #160029;
+}
+
+p {
+    color: #160029;
+    align-self:right;
+    margin: 10px 0;
+    font-family: 'Simonetta Italic', serif;
+    font-size: 150%;
+    font-weight: 600;
+}
+
+.layout {
+  display: none;
+}
+
+body[data-layout="layout1"] #layout1,
+body[data-layout="layout2"] #layout2,
+body[data-layout="layout3"] #layout3 {
+  display: block;
+}
+
+
+body[data-layout="layout1"] #layout1 {
+  background: #f7e7e7;
+}
+
+body[data-layout="layout2"] #layout2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+body[data-layout="layout3"] #layout3 {
+  display: flex;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: Simonetta Italic; 
+  src: url(risorse/base/fonts/Simonetta/Simonetta-Italic.ttf);
 }
