@@ -54,6 +54,8 @@ header {
     padding:.1rem 1rem;
 }
 
+
+
 @media (min-width:200px) {
     .padded-boxes > * {
         width:calc((100% - 4rem) / 3);
@@ -84,4 +86,15 @@ h1 {
 
 body {
 background-color: #282628;
+}
+
+a {
+  color: #1c1b1c;
+  text-decoration: none;
+  padding: auto;
+}
+
+p {
+  color: #1c1b1c;
+  margin: 10px 0;
 }
