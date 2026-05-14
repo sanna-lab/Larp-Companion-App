@@ -97,8 +97,9 @@ a {
 p {
   color: #1c1b1c;
   margin: 10px 0;
-  font-family: 'Simonetta Regular';
+  font-family: 'Simonetta Italic', serif;
   font-size: 150%;
+  font-weight: 600;
 }
 
 .button {
@@ -115,8 +116,8 @@ p {
 }
 
 .button img {
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -132,4 +133,19 @@ p {
 @font-face {
   font-family: Simonetta Regular; 
   src: url(risorse/base/fonts/Simonetta/Simonetta-Regular.ttf);
+}
+
+@font-face {
+  font-family: Simonetta BlackItalic; 
+  src: url(risorse/base/fonts/Simonetta/Simonetta-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: Simonetta Black; 
+  src: url(risorse/base/fonts/Simonetta/Simonetta-Black.ttf);
+}
+
+@font-face {
+  font-family: Simonetta Italic; 
+  src: url(risorse/base/fonts/Simonetta/Simonetta-Italic.ttf);
 }
