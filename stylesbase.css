@@ -5,7 +5,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: spin 2s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
 .loader-image {
@@ -20,7 +20,6 @@
 }
 
 header {
-  background-color: #282628;
   text-align: center;
   padding: 20px 0;
 }
@@ -85,6 +84,9 @@ h1 {
 
 body {
 background-color: #282628;
+background-image: url(risorse/base/images/Background_Base.png);
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 a {
