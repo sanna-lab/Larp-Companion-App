@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="stylesvigevano.css">
 </head>
 <body>
+    <a href="wip.html" class="floating-button"></a>
       <header>
       <img src="risorse/vigevano/icons/login_12121599.png" style="height: 50px; width: 50px;">
       <div class="header-text">
@@ -44,6 +45,80 @@
           </select>
         </div>
       </div>
+
+      <div class="stat">
+      <img src="risorse/vigevano/icons/mask_4061302.png" style="height: 20px; width: 20px; position: relative; top: 0px;">
+            <button type="button" onclick="change(-1)">-</button>
+            <input type="number" id="qty" min="0" max="10" step="1" value="1">
+            <button type="button" onclick="change(1)">+</button>
+            
+            <script>
+            function change(delta) {
+              const el = document.getElementById('qty');
+              const min = Number(el.min) || -Infinity;
+              const max = Number(el.max) || Infinity;
+              const next = Number(el.value) + delta;
+              el.value = Math.min(max, Math.max(min, next));
+              el.dispatchEvent(new Event('input'));
+            }
+            </script> 
+            </div>
+      <div class="stat">
+      <img src="risorse/vigevano/icons/drop_1633486.png" style="height: 20px; width: 20px; position: relative; top: 0px;">
+            <button type="button" onclick="change(-1)">-</button>
+            <input type="number" id="qty" min="0" max="10" step="1" value="1">
+            <button type="button" onclick="change(1)">+</button>
+            
+            <script>
+            function change(delta) {
+              const el = document.getElementById('qty');
+              const min = Number(el.min) || -Infinity;
+              const max = Number(el.max) || Infinity;
+              const next = Number(el.value) + delta;
+              el.value = Math.min(max, Math.max(min, next));
+              el.dispatchEvent(new Event('input'));
+            }
+            </script>
+            </div>
+
+      <div class="stat"> 
+        <img src="risorse/vigevano/icons/love_7238141.png" style="height: 20px; width: 20px; position: relative; top: 0px;">
+            <button type="button" onclick="change(-1)">-</button>
+            <input type="number" id="qty" min="0" max="10" step="1" value="1">
+            <button type="button" onclick="change(1)">+</button>
+            
+            <script>
+            function change(delta) {
+              const el = document.getElementById('qty');
+              const min = Number(el.min) || -Infinity;
+              const max = Number(el.max) || Infinity;
+              const next = Number(el.value) + delta;
+              el.value = Math.min(max, Math.max(min, next));
+              el.dispatchEvent(new Event('input'));
+            }
+            </script> 
+            </div>
+
+      <div class="stat">
+        <img src="risorse/vigevano/icons/insurance_5609318.png" style="height: 20px; width: 20px; position: relative; top: 0px;">
+            <button type="button" onclick="change(-1)">-</button>
+            <input type="number" id="qty" min="0" max="10" step="1" value="1">
+            <button type="button" onclick="change(1)">+</button>
+            
+            <script>
+            function change(delta) {
+              const el = document.getElementById('qty');
+              const min = Number(el.min) || -Infinity;
+              const max = Number(el.max) || Infinity;
+              const next = Number(el.value) + delta;
+              el.value = Math.min(max, Math.max(min, next));
+              el.dispatchEvent(new Event('input'));
+            }
+            </script> 
+            </div>
+
+  
+          
     </header>
     <nav>
     <button onclick="setLayout(1)">Layout 1</button>

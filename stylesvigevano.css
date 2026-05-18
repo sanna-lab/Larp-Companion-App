@@ -3,7 +3,7 @@ header {
   align-items: center;
   gap: 10px;
   justify-content: flex-start;
-  background-color: #d44d5c;
+  background-color: #f5e9e2;
   padding: 10px;
   color: #160029;
 }
@@ -19,6 +19,12 @@ header p {
   text-align: left;
 }
 
+button {
+  background-color: #d2505fc0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
 body {
 background-color: #160029;
@@ -28,6 +34,13 @@ p {
     color: #160029;
     align-self:right;
     margin: 10px 0;
+    font-family: 'Simonetta Italic', serif;
+    font-size: 100%;
+    font-weight: 600;
+}
+
+label {
+    color: #160029;
     font-family: 'Simonetta Italic', serif;
     font-size: 100%;
     font-weight: 600;
@@ -62,4 +75,27 @@ body[data-layout="layout3"] #layout3 {
 @font-face {
   font-family: Simonetta Italic; 
   src: url(risorse/base/fonts/Simonetta/Simonetta-Italic.ttf);
+}
+
+.floating-buttons,
+.floating-button {
+  position: fixed;
+  right: 20px;
+  z-index: 1000;
+}
+
+.floating-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.floating-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  background: #d44d5c;
+  text-decoration: none;
 }
