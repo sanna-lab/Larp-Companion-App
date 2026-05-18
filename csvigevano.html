@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="stylesvigevano.css">
 </head>
 <body>
-    <a href="wip.html" class="floating-button"></a>
+    <a href="wip.html" class="floating-button" style="position: fixed; left: 20px; top: 0px;"></a>
       <header>
       <img src="risorse/vigevano/icons/login_12121599.png" style="height: 50px; width: 50px;">
       <div class="header-text">
@@ -46,37 +46,37 @@
         </div>
       </div>
 
-      <div class="stat">
+      <div class="stat-group">
         <img src="risorse/vigevano/icons/mask_4061302.png" style="height: 20px; width: 20px; position: relative; top: 0px;" title="Maquerade">
-        <button type="button" onclick="change(this, -1)">-</button>
-        <input type="number" min="0" max="5" step="1" value="1">
         <button type="button" onclick="change(this, 1)">+</button>
+        <input type="number" min="0" max="15" step="1" value="1">
+        <button type="button" onclick="change(this, -1)">-</button>
       </div>
 
-      <div class="stat">
+      <div class="stat-group">
       <img src="risorse/vigevano/icons/drop_1633486.png" style="height: 20px; width: 20px; position: relative; top: 0px;" title="Blood">
-            <button type="button" onclick="change(this, -1)">-</button>
-            <input type="number" id="qtyb" min="0" max="15" step="1" value="1">
-            <button type="button" onclick="change(this, 1)">+</button>
+        <button type="button" onclick="change(this, 1)">+</button>
+        <input type="number" min="0" max="15" step="1" value="1">
+        <button type="button" onclick="change(this, -1)">-</button>
             </div>
-          
-      <div class="stat"> 
+        
+      <div class="stat-group"> 
         <img src="risorse/vigevano/icons/love_7238141.png" style="height: 20px; width: 20px; position: relative; top: 0px;" title="Humanity">
-            <button type="button" onclick="change(this, -1)">-</button>
-            <input type="number" id="qtyh" min="0" max="10" step="1" value="1">
             <button type="button" onclick="change(this, 1)">+</button>
+            <input type="number" min="0" max="15" step="1" value="1">
+            <button type="button" onclick="change(this, -1)">-</button>
             </div>
 
-      <div class="stat">
+      <div class="stat-group">
         <img src="risorse/vigevano/icons/insurance_5609318.png" style="height: 20px; width: 20px; position: relative; top: 0px;" title="Health">
-            <button type="button" onclick="change(this, -1)">-</button>
-            <input type="number" id="qtyhe" min="0" max="15" step="1" value="1">
             <button type="button" onclick="change(this, 1)">+</button>
+            <input type="number" min="0" max="15" step="1" value="1">
+            <button type="button" onclick="change(this, -1)">-</button>
             </div>
 
     <script>
   function change(button, delta) {
-    const stat = button.closest('.stat');
+    const stat = button.closest('.stat-group');
     const input = stat.querySelector('input[type="number"]');
     const min = Number(input.min) || -Infinity;
     const max = Number(input.max) || Infinity;

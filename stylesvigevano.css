@@ -19,6 +19,16 @@ header p {
   text-align: left;
 }
 
+.stat-group {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 2fr));
+  gap: 5px;
+}
+
+.stat {
+  width: 50%;
+}
+
 button {
   background-color: #d2505fc0;
   color: white;
@@ -88,11 +98,8 @@ body[data-layout="layout3"] #layout3 {
 }
 
 .floating-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 48px;
-  min-height: 48px;
+  width: 40px;
+  height: 40px;
   background: #d44d5c;
   text-decoration: none;
 }
