@@ -3,7 +3,7 @@ header {
   align-items: center;
   gap: 10px;
   justify-content: flex-start;
-  background-color: #f5e9e2;
+  background-color: #e3b5a4;
   padding: 10px;
   color: #160029;
 }
@@ -31,7 +31,7 @@ header p {
   left: 50%;
   top: -1.5rem;
   transform: translateX(-50%);
-  background: rgba(245, 233, 226, 0.95);
+  background: #f5e9e2f2;
   color: #160029;
   border-radius: 8px;
   padding: 4px 8px;
@@ -55,14 +55,14 @@ header p {
 }
 
 button {
-  background-color: #d2505fc0;
+  background-color: #d44d5c;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 body {
-background-color: #160029;
+background-color: #f5e9e2f2;
 }
 
 p {
@@ -93,15 +93,15 @@ body[data-layout="layout3"] #layout3 {
 
 
 body[data-layout="layout1"] #layout1 {
-  background: #f5e9e2;
+  background: #e3b5a4;
 }
 
 body[data-layout="layout2"] #layout2 {
-  background: #f5e9e2;
+  background: #e3b5a4;
 }
 
 body[data-layout="layout3"] #layout3 {
-  background: #f5e9e2;
+  background: #e3b5a4;
 }
 
 @font-face {
@@ -156,12 +156,19 @@ nav {
 }
 
 
-nav button.active {
-  background-color: #a0263f;
+
+
+nav button {
+  background-color: #d44d5c;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Simonetta Regular', serif;
+  font-weight: 400;
 }
 
-nav button:hover {
-  opacity: 0.8; 
+nav button.active {
+  background-color: #773344;
 }
 
 
