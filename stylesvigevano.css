@@ -154,3 +154,33 @@ nav {
     width: 100%;
     justify-content: space-between;
 }
+
+
+nav button.active {
+  background-color: #a0263f;
+}
+
+nav button:hover {
+  opacity: 0.8; 
+}
+
+
+@font-face {
+  font-family: Simonetta Regular; 
+  src: url(risorse/base/fonts/Simonetta/Simonetta-Regular.ttf);
+}
+
+@font-face {
+  font-family: Simonetta BlackItalic; 
+  src: url(risorse/base/fonts/Simonetta/Simonetta-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: Simonetta Black; 
+  src: url(risorse/base/fonts/Simonetta/Simonetta-Black.ttf);
+}
+
+@font-face {
+  font-family: Simonetta Italic; 
+  src: url(risorse/base/fonts/Simonetta/Simonetta-Italic.ttf);
+}
