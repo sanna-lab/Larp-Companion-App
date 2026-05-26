@@ -47,28 +47,32 @@
       </div>
 
       <div class="stat-group">
-        <img src="risorse/vigevano/icons/mask_4061302.png" style="height: 20px; width: 20px; position: relative; top: 0px;" title="Maquerade">
+        <img src="risorse/vigevano/icons/mask_4061302.png" style="height: 20px; width: 20px; position: relative; top: 0px; align-self: center;
+    justify-self: center;" title="Maquerade">
         <button type="button" onclick="change(this, 1)">+</button>
         <input type="number" min="0" max="15" step="1" value="1">
         <button type="button" onclick="change(this, -1)">-</button>
       </div>
 
       <div class="stat-group">
-      <img src="risorse/vigevano/icons/drop_1633486.png" style="height: 20px; width: 20px; position: relative; top: 0px;" title="Blood">
+      <img src="risorse/vigevano/icons/drop_1633486.png" style="height: 20px; width: 20px; position: relative; top: 0px; align-self: center;
+    justify-self: center;" title="Blood">
         <button type="button" onclick="change(this, 1)">+</button>
         <input type="number" min="0" max="15" step="1" value="1">
         <button type="button" onclick="change(this, -1)">-</button>
             </div>
         
       <div class="stat-group"> 
-        <img src="risorse/vigevano/icons/love_7238141.png" style="height: 20px; width: 20px; position: relative; top: 0px;" title="Humanity">
+        <img src="risorse/vigevano/icons/love_7238141.png" style="height: 20px; width: 20px; position: relative; top: 0px; align-self: center;
+    justify-self: center;" title="Humanity">
             <button type="button" onclick="change(this, 1)">+</button>
             <input type="number" min="0" max="15" step="1" value="1">
             <button type="button" onclick="change(this, -1)">-</button>
             </div>
 
       <div class="stat-group">
-        <img src="risorse/vigevano/icons/insurance_5609318.png" style="height: 20px; width: 20px; position: relative; top: 0px;" title="Health">
+        <img src="risorse/vigevano/icons/insurance_5609318.png" style="height: 20px; width: 20px; position: relative; top: 0px; align-self: center;
+    justify-self: center;" title="Health">
             <button type="button" onclick="change(this, 1)">+</button>
             <input type="number" min="0" max="15" step="1" value="1">
             <button type="button" onclick="change(this, -1)">-</button>
@@ -85,12 +89,44 @@
     input.dispatchEvent(new Event('input'));
   }
   </script>
-          
+        
+      <script>
+      function change(button, delta) {
+        const stat = button.closest('.stat-group');
+        const input = stat.querySelector('input[type="number"]');
+        const min = Number(input.min) || -Infinity;
+        const max = Number(input.max) || Infinity;
+        const next = Number(input.value) + delta;
+        input.value = Math.min(max, Math.max(min, next));
+        input.dispatchEvent(new Event('input'));
+      }
+    
+      document.querySelectorAll('.stat-group img[title]').forEach(img => {
+        img.addEventListener('click', () => {
+          const stat = img.closest('.stat-group');
+          let tooltip = stat.querySelector('.tooltip');
+          if (!tooltip) {
+            tooltip = document.createElement('div');
+            tooltip.className = 'tooltip';
+            stat.appendChild(tooltip);
+          }
+          tooltip.textContent = img.getAttribute('title');
+          stat.classList.add('show-title');
+    
+          clearTimeout(stat._titleTimeout);
+          stat._titleTimeout = setTimeout(() => {
+            stat.classList.remove('show-title');
+          }, 1800);
+        });
+      });
+    </script>  
+
     </header>
+
     <nav>
-    <button onclick="setLayout(1)" style="position: absolute; margin-left: 0%;">Discipline</button>
-    <button onclick="setLayout(2)" style="position: absolute; margin-left: 50%;">Abilità</button>
-    <button onclick="setLayout(3)" style="position: absolute; margin-left: 100%;">Background</button>
+    <button onclick="setLayout(1)" style="background-color: #d2505f; color: #160029; cursor: pointer; font-size: 20px; font-family: 'Simonetta Regular', serif; font-weight: 600;">Discipline</button>
+    <button onclick="setLayout(2)" style="background-color: #d2505f; color: #160029; cursor: pointer; font-size: 20px; font-family: 'Simonetta Regular', serif;">Abilità</button>
+    <button onclick="setLayout(3)" style="background-color: #d2505f; color: #160029; cursor: pointer; font-size: 20px; font-family: 'Simonetta Regular', serif;">Background</button>
   </nav>
 
   <div class="layout" id="layout1">
