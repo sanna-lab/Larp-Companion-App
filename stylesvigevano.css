@@ -20,10 +20,35 @@ header p {
 }
 
 .stat-group {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 2fr));
   gap: 5px;
 }
+
+.stat-group .tooltip {
+  position: absolute;
+  left: 50%;
+  top: -1.5rem;
+  transform: translateX(-50%);
+  background: rgba(245, 233, 226, 0.95);
+  color: #160029;
+  border-radius: 8px;
+  padding: 4px 8px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-size: 0.85rem;
+  z-index: 10;
+}
+
+.stat-group.show-title .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
 
 .stat {
   width: 50%;

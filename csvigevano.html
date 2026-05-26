@@ -90,36 +90,36 @@
   }
   </script>
         
-      <script>
-      function change(button, delta) {
-        const stat = button.closest('.stat-group');
-        const input = stat.querySelector('input[type="number"]');
-        const min = Number(input.min) || -Infinity;
-        const max = Number(input.max) || Infinity;
-        const next = Number(input.value) + delta;
-        input.value = Math.min(max, Math.max(min, next));
-        input.dispatchEvent(new Event('input'));
-      }
-    
-      document.querySelectorAll('.stat-group img[title]').forEach(img => {
-        img.addEventListener('click', () => {
-          const stat = img.closest('.stat-group');
-          let tooltip = stat.querySelector('.tooltip');
-          if (!tooltip) {
-            tooltip = document.createElement('div');
-            tooltip.className = 'tooltip';
-            stat.appendChild(tooltip);
-          }
-          tooltip.textContent = img.getAttribute('title');
-          stat.classList.add('show-title');
-    
-          clearTimeout(stat._titleTimeout);
-          stat._titleTimeout = setTimeout(() => {
-            stat.classList.remove('show-title');
-          }, 1800);
+        <script>
+        function change(button, delta) {
+          const stat = button.closest('.stat-group');
+          const input = stat.querySelector('input[type="number"]');
+          const min = Number(input.min) || -Infinity;
+          const max = Number(input.max) || Infinity;
+          const next = Number(input.value) + delta;
+          input.value = Math.min(max, Math.max(min, next));
+          input.dispatchEvent(new Event('input'));
+        }
+      
+        document.querySelectorAll('.stat-group img[title]').forEach(img => {
+          img.addEventListener('click', () => {
+            const stat = img.closest('.stat-group');
+            let tooltip = stat.querySelector('.tooltip');
+            if (!tooltip) {
+              tooltip = document.createElement('div');
+              tooltip.className = 'tooltip';
+              stat.appendChild(tooltip);
+            }
+            tooltip.textContent = img.getAttribute('title');
+            stat.classList.add('show-title');
+      
+            clearTimeout(stat._titleTimeout);
+            stat._titleTimeout = setTimeout(() => {
+              stat.classList.remove('show-title');
+            }, 1800);
+          });
         });
-      });
-    </script>  
+      </script>
 
     </header>
 
